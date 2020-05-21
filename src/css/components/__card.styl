@@ -1,0 +1,29 @@
+
+.card
+  padding: $boxPadding
+  background-color: $secondaryColor
+  &:over
+    background-color: $secondaryColor
+  &-darkMode
+    background-color: hsl(228, 28%, 20%)
+  div
+    display: flex
+    justify-content: space-between
+  div:last-child
+    align-items: flex-end
+  &__percentage
+    padding-top: calc( $boxPadding / 2 )
+    color: $highlightFontColor
+    align(right)
+    span:first-child
+      align-self: center
+  &__title
+    Subtitle(bold)
+    align(left)
+  &__number
+    padding-top: calc($boxPadding / 2)
+    Title(medium)
+    align(left)
+  &__icon
+    margin-left: auto
+    align(right)

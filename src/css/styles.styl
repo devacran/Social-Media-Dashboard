@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400 700&display=swap')
+@import 'components/__global.styl'
+@import 'components/__bigCard.styl'
+@import 'components/__card.styl'
+
+
+*
+  box-sizing: border-box
+  font-family: $font1
+
+body
+  width: 80%
+  margin: auto
+  transition: .4s
+  color: $fontPrimaryColor
+
+h1
+  Title(medium)
+
+h2
+  Subtitle(bold)
+
+header
+  display: flex
+  padding-bottom: $boxPadding
+  justify-content: space-between
+  align-items: center
+  & .header_switch span:first-child
+    margin-right: 1em
+
+.darkMode
+  background-color: $darkBody
+  color: $fontPrimaryColorDarkMode
+
+.overview
+  grid(4)
+  @media mqDesk
+    grid(3)
+  @media mqTablet
+    grid(2)
+  @media mqTablet
+    grid(1)
+
+
+.switch
+  display: inline-block
+  width: 60px
+  height:34px
+  position: relative
+  input
+    display: none
+
+.slider
+  position: absolute
+  cursor: pointer
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  transition: .4s
+  background: rgb(13,97,158)
+  background: linear-gradient(90deg, rgba(13,97,158,1) 0%, rgba(11,149,177,1) 0%, rgba(0,212,255,1) 100%)
+
+.slider:before
+  position: absolute
+  content: ''
+  height: 26px
+  width: 26px
+  left: 4px
+  bottom: 4px
+  background-color: $secondaryColor
+  transition: .4s
+
+.slider.round
+  border-radius: 34px
+  &:before
+    border-radius: 50%
+
+
+input:checked + .slider
+  background: rgb(16,4,79)
+  background: linear-gradient(90deg, rgba(16,4,79,1) 0%, rgba(51,11,177,1) 100%, rgba(13,97,158,1) 100%)
+
+input:checked + .slider::before
+    left: 30px
+
+.header_switch
+  display: flex
+  align-items: center

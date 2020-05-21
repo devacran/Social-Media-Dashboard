@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400 700&display=swap");
+.bigCard {
+  height: auto;
+  padding: 25px;
+  background-color: #f0f2fa;
+  border-radius: 3px;
+  text-align: center;
+  position: relative;
+}
+.bigCard:over {
+  background-color: #f0f2fa;
+}
+.bigCard-darkMode {
+  background-color: #252a41;
+}
+.bigCard__border {
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #f00;
+}
+.bigCard__social {
+  display: flex;
+  width: 45%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.bigCard__social span:first-child {
+  margin-right: 1em;
+}
+.bigCard__number {
+  padding-top: calc(($boxPadding / 2));
+  font-weight: bold;
+  font-size: 40px;
+}
+.bigCard__title {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: lighter;
+}
+.bigCard__percentage {
+  padding-top: calc(($boxPadding / 2));
+  color: #1db489;
+}
+.bigCard__percentage span:first-child {
+  margin-right: 0.5em;
+}
+.bigCard__border-facebook {
+  background-color: #198ff5;
+}
+.bigCard__border-instagram {
+  background: #833ab4;
+  background: linear-gradient(90deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%);
+}
+.bigCard__border-twitter {
+  background: #1ca0f2;
+}
+.bigCard__border-youtube {
+  background-color: #c4032a;
+}
+.card {
+  padding: 25px;
+  background-color: #f0f2fa;
+}
+.card:over {
+  background-color: #f0f2fa;
+}
+.card-darkMode {
+  background-color: #252a41;
+}
+.card div {
+  display: flex;
+  justify-content: space-between;
+}
+.card div:last-child {
+  align-items: flex-end;
+}
+.card__percentage {
+  padding-top: calc(($boxPadding / 2));
+  color: #1db489;
+}
+.card__percentage span:first-child {
+  align-self: center;
+}
+.card__title {
+  font-size: 14px;
+  font-weight: bold;
+}
+.card__number {
+  padding-top: calc(($boxPadding / 2));
+  font-weight: bold;
+  font-size: 30px;
+}
+.card__icon {
+  margin-left: auto;
+}
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+body {
+  width: 80%;
+  margin: auto;
+  transition: 0.4s;
+  color: #1e202a;
+}
+h1 {
+  font-weight: bold;
+  font-size: 30px;
+}
+h2 {
+  font-size: 14px;
+  font-weight: bold;
+}
+header {
+  display: flex;
+  padding-bottom: 25px;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header_switch span:first-child {
+  margin-right: 1em;
+}
+.darkMode {
+  background-color: #1e202a;
+  color: #fff;
+}
+.overview {
+  display: grid;
+  margin-bottom: calc(($boxPadding * 2));
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 25px;
+  border: 1px solid transparent;
+}
+@media only screen and (max-width: 1024px) {
+  .overview {
+    display: grid;
+    margin-bottom: calc(($boxPadding * 2));
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    border: 1px solid transparent;
+  }
+}
+@media only screen and (max-width: 725px) {
+  .overview {
+    display: grid;
+    margin-bottom: calc(($boxPadding * 2));
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
+    border: 1px solid transparent;
+  }
+}
+@media only screen and (max-width: 725px) {
+  .overview {
+    display: grid;
+    margin-bottom: calc(($boxPadding * 2));
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 25px;
+    border: 1px solid transparent;
+  }
+}
+.switch {
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  position: relative;
+}
+.switch input {
+  display: none;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transition: 0.4s;
+  background: #0d619e;
+  background: linear-gradient(90deg, #0d619e 0%, #0b95b1 0%, #00d4ff 100%);
+}
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #f0f2fa;
+  transition: 0.4s;
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background: #10044f;
+  background: linear-gradient(90deg, #10044f 0%, #330bb1 100%, #0d619e 100%);
+}
+input:checked + .slider::before {
+  left: 30px;
+}
+.header_switch {
+  display: flex;
+  align-items: center;
+}

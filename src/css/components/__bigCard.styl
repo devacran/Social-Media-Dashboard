@@ -1,0 +1,57 @@
+.bigCard
+  height: auto
+  padding: $boxPadding
+  background-color: $secondaryColor
+  border-radius: 3px
+  text-align: center
+  position: relative
+  &:over
+    background-color: $secondaryColor
+
+  &-darkMode
+    background-color: $darkCardBG
+
+  &__border
+    height: 3px
+    width: 100%
+    position: absolute
+    top: 0
+    right: 0
+    background-color: red
+
+  &__social
+    display: flex
+    width: 45%
+    margin: 0 auto
+    justify-content: space-between
+    span:first-child
+      margin-right: 1em
+
+
+  &__number
+    padding-top: calc($boxPadding / 2)
+    Title(large)
+
+  &__title
+    text-transform: uppercase
+    Subtitle(lighter)
+
+  &__percentage
+    padding-top: calc($boxPadding / 2)
+    color: $highlightFontColor
+    span:first-child
+      margin-right: 0.5em
+
+
+  &__border-facebook
+    background-color: $facebookGradient
+
+  &__border-instagram
+    background: rgb(131,58,180)
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)
+
+  &__border-twitter
+    background: hsl(203, 89%, 53%)
+
+  &__border-youtube
+    background-color: hsl(348, 97%, 39%)
