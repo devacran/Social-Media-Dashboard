@@ -134,7 +134,7 @@ header .header_switch span:first-child {
   grid-gap: 25px;
   border: 1px solid transparent;
 }
-@media only screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .overview {
     display: grid;
     margin-bottom: calc(($boxPadding * 2));
